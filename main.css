@@ -6,26 +6,52 @@ body {
 }
 
 header {
-    background: linear-gradient(to right bottom, red, orange, yellow, green, lightblue, blue,purple );
+    background: linear-gradient(to right bottom,red, orange, yellow, green, lightblue, blue,purple);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
+    transition: 1s;
+}
+
+header:active {
+    font-size: 30px;
+}
+
+head:hover {
+    font-size: 30px;
+    color: black;
 }
 
 footer {
-    background: linear-gradient(to right bottom, red, orange, yellow, green, lightblue, blue,purple );
+    background: linear-gradient(to right, red, orange, yellow, green, lightblue, blue, purple);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
     text-align: right;
+    transition: 1s;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-a{
+footer:active {
+    font-size: 30px;
+}
+
+footer:hover {
+    font-size: 30px;
+    color: black;
+}
+a {
+    color: green;
+    text-decoration: none;
+    transition: 0.3s;
+    text-shadow: 1px 1px 1 px black;
 }
 
 a:visited {
-    color: brown;
-    text-decoration: line-through;
+   color: brown;
+   text-decoration: line-through; 
 }
 
 a:hover {
@@ -38,5 +64,4 @@ a:hover {
 a:active {
     color: pink;
     background-color: green;
-
 }
