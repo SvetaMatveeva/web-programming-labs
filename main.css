@@ -13,6 +13,10 @@ header {
     transition: 1s;
 }
 
+main{
+    margin: 10px 20px;
+}
+
 header:active {
     font-size: 30px;
 }
