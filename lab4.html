@@ -7,7 +7,7 @@
     <title>Матвеева Свелтлана Евгеньевна, Лабораторная 4</title>
     <link rel="stylesheet" href="main.css">
     <style>
-        div {
+        main div {
             margin: 20px;
             border: 1px solid;
             border-radius: 7px;
@@ -16,6 +16,21 @@
             height: 150px;
             overflow-y: auto;
             overflow-x: hidden;
+            position: relative;
+            background: linear-gradient(#ccf , #ddf);
+            z-index: 2;
+        }
+
+        .second {
+            z-index: 1;
+            left: 380px;
+            top: 120px;
+            position: fixed;
+            transition: 500ms;
+        }
+
+        .second:hover{
+            z-index: 3;
         }
     </style>
 </head>
