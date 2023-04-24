@@ -13,6 +13,14 @@
             let result = a + b;
             alert('Сумма' + a + ' и ' + b + ' равна ' + result);
         } 
+        function showAutor() {
+            let autor = 'Автор страницы: \nМатвеева Светлана Евгеньевна';
+            alert(autor);
+        }
+        function hi() {
+            let autor = 'Привет друг!';
+            alert(autor);
+        }
     </script>
     <style>
         .massage {
@@ -31,16 +39,16 @@
 
 </head>
 <body>
-    <header>
+    <header onclick="showAutor()">
         НГТУ, фб, Лабораторная работа 5
     </header>
 
     <main>
         <div class="massage" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="massage">Узнать, кто автор страницы</div>
+        <div class="massage" onclick="showAutor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="hi()">
         &copy; Матвеева Свелтлана, ФБИ -13, 2 курс, 2023
     </footer>
     
