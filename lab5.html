@@ -106,6 +106,16 @@
             position: relative;
             z-index: 2;
         }
+        .round{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            display: inline-block;
+        }
     </style>
 
 </head>
@@ -151,6 +161,17 @@
             <input type="button" value="Рассчитать" onclick="kassa()">
             <div id="result1"></div>
           </div>
+
+          <div class="round" id="c1" style="background-color: rgb(10, 167, 31)" onclick="unshow('c1')">1</div>
+          <div class="round" id="c2" style="background-color: rgb(10, 141, 167)" onclick="unshow('c2')">2</div>
+          <div class="round" id="c3" style="background-color: rgb(60, 10, 167)" onclick="unshow('c3')">3</div>
+          <div class="round" id="c4" style="background-color: rgb(167, 10, 117)" onclick="unshow('c4')">4</div>
+          <div class="round" id="c5" style="background-color: rgb(167, 10, 10)" onclick="unshow('c5')">5</div>
+          <div class="round" id="c6" style="background-color: rgb(1, 20, 4)" onclick="unshow('c6')">6</div>
+          <div class="round" id="c7" style="background-color: rgb(169, 63, 6)" onclick="unshow('c7')">7</div>
+          <div class="round" id="c8" style="background-color: rgb(255, 255, 255)" onclick="unshow('c8')">8</div>
+          <div class="round" id="c9" style="background-color: rgb(134, 213, 225)" onclick="unshow('c9')">9</div>
+          <div class="round" id="c10" style="background-color: rgb(6, 55, 13)" onclick="unshow('c10')">10</div>
 
     </main>
 
