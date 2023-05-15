@@ -20,24 +20,24 @@
         }
 
         .rules {
-        background-color: aliceblue;
-        color: brown;
-        border-radius: 20px;
-        width: 900px;
-        padding: 10px;
-        margin: 40px auto;
-        font-weight: bold;
+            background-color: aliceblue;
+            color: brown;
+            border-radius: 20px;
+            width: 900px;
+            padding: 10px;
+            margin: 40px auto;
+            font-weight: bold;
 
         }
 
         .color {
-        background-color: yellow;
-        border: 2px solid;
-        border-radius: 20px;
-        width: 250px;
-        padding: 10px;
-        margin: 40px auto;
-        text-align: center;
+            background-color: yellow;
+            border: 2px solid;
+            border-radius: 20px;
+            width: 250px;
+            padding: 10px;
+            margin: 40px auto;
+            text-align: center;
 
         }
 
@@ -65,6 +65,11 @@
             text-align: center;
             border: 2px solid red;
             border-radius: 10px;
+        }
+
+        #wear {
+            width: 500px;
+            height: auto;
         }
     </style>
 
@@ -152,7 +157,7 @@
             document.getElementById('color-name').innerHTML = 'желтый';
             div.style.color = 'black'
         }
-    }
+        }
 
         function moveBlock() {
             let block = document.getElementById("moving-block");
@@ -174,6 +179,42 @@
             block.style.width = newWidth + "px";
             } else {
             block.style.width = "100px";
+            }
+        }
+
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+            if (color == 'Красный' && type == 'Футболка') {
+                wear.src = 'red-f.jpg'
+            }
+            else if (color == 'Белый' && type == 'Футболка') {
+                wear.src = 'white-f.jpg'
+            }
+            else if (color == 'Черный' && type == 'Футболка') {
+                wear.src = 'black-f.jpg'
+            }
+            else if (color == 'Красный' && type == 'Поло') {
+                wear.src = 'red-p.jpg'
+            }
+            else if (color == 'Белый' && type == 'Поло') {
+                wear.src = 'white-p.jpg'
+            }
+            else if (color == 'Черный' && type == 'Поло') {
+                wear.src = 'black-p.jpg'
+            }
+            else if (color == 'Красный' && type == 'Майка') {
+                wear.src = 'red-m.jpg'
+            }
+            else if (color == 'Белый' && type == 'Майка') {
+                wear.src = 'white-m.jpg'
+            }
+            else if (color == 'Черный' && type == 'Майка') {
+                wear.src = 'black-m.jpg'
+            }
+            else {
+                alert("Вы не выбрали")
             }
         }
     </script>
@@ -239,6 +280,27 @@
         <div id="myBlock" onclick="increaseWidth()">
             Расширение
         </div>
+
+        <div style="margin-top: 50px;">
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Черный</option>
+            </select>
+
+            Тип одежды:
+            <select id="wear-type">
+            <option>Футболка</option>
+            <option>Поло</option>
+            <option>Майка</option>
+            </select>
+
+        </div>
+
+       <div><button onclick="filter()">OK</button></div>
+
+       <div><img id="wear" style="background-color: gray;"></div>
     </main>
 
     <footer>
