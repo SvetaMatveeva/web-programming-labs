@@ -56,6 +56,16 @@
             border: 2px solid green;
             border-radius: 10%;
         }
+
+        #myBlock {
+            width: 100px;
+            cursor: pointer;
+            background-color: pink;
+            margin-top: 230px;
+            text-align: center;
+            border: 2px solid red;
+            border-radius: 10px;
+        }
     </style>
 
     <script>
@@ -224,6 +234,10 @@
 
         <div id="moving-block" onclick="moveBlock()">
             Щёлкни меня
+        </div>
+
+        <div id="myBlock" onclick="increaseWidth()">
+            Расширение
         </div>
     </main>
 
