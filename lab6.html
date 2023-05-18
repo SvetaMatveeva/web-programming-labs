@@ -137,21 +137,25 @@
                 div.style.backgroundColor = 'red';
                 document.getElementById('color-name').innerHTML = 'красный';
         }
-        else if (div.style.backgroundColor == 'red') {
-            div.style.backgroundColor = 'black';
-            div.style.color = 'white';
-            document.getElementById('color-name').innerHTML = 'черный';
-        }
-        else if (div.style.backgroundColor == 'black') {
-            div.style.backgroundColor = 'pink';
-            div.style.color = 'black';
-            document.getElementById('color-name').innerHTML = 'розовый';
-        }
-        else if (div.style.backgroundColor == 'pink') {
-            div.style.backgroundColor = 'green';
-            div.style.color = 'white';
-            document.getElementById('color-name').innerHTML = 'зеленый';
-        }
+
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'черный';
+            }
+
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'pink';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'розовый';
+            }
+
+            else if (div.style.backgroundColor == 'pink') {
+                div.style.backgroundColor = 'green';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'зеленый';
+            }
+            
         else {
             div.style.backgroundColor = 'yellow';
             document.getElementById('color-name').innerHTML = 'желтый';
@@ -159,11 +163,11 @@
         }
         }
 
-        function moveBlock() {
+            function moveBlock() {
             let block = document.getElementById("moving-block");
             if (block.style.left == "0px") {
-            block.style.transform = "rotate(4turn)";
-            block.style.left = "calc(100% - 153px)";
+                block.style.transform = "rotate(4turn)";
+                block.style.left = "calc(100% - 153px)";
 
             } else {
             block.style.left = "0";
@@ -172,9 +176,9 @@
         }
 
         function increaseWidth() {
-            const block = document.getElementById("myBlock");
-            const currentWidth = parseInt(block.style.width);
-            const newWidth = currentWidth + 50;
+                const block = document.getElementById("myBlock");
+                const currentWidth = parseInt(block.style.width);
+                const newWidth = currentWidth + 50;
             if (newWidth <= 1000) {
             block.style.width = newWidth + "px";
             } else {
@@ -287,9 +291,9 @@
                 <option>Красный</option>
                 <option>Белый</option>
                 <option>Черный</option>
-            </select>
+                </select>
 
-            Тип одежды:
+                Тип одежды:
             <select id="wear-type">
             <option>Футболка</option>
             <option>Поло</option>
