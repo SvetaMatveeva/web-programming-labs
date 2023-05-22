@@ -94,6 +94,41 @@
                 newTable.appendChild(newTr)
             }
         }
+
+        function showCurs() {
+
+            let curs = [38.42, 39.05, 39.04, 39.18, 38.78, 39.62, 40.01, 39.72, 39.57, 39.24];
+            let date = ['08.05.2023', '10.05.2023', '11.05.2023', '12.05.2023', '15.05.2023', '16.05.2023', '17.05.2023', '18.05.2023',
+            '19.05.2023', '22.05.2023'];
+            let cursTable = document.getElementById('TableCurs');
+
+            for (let i = 0; i<curs.length; i++) {
+                let tr = document.createElement('tr');
+                let dateTd = document.createElement('td');
+                let cursTd = document.createElement('td');
+                let newTd = document.createElement('td');
+                dateTd.innerHTML = date[i];
+                cursTd.innerHTML = curs[i];
+                newTd.innerHTML = (curs[i] - curs[i-1]).toFixed(2);
+                tr.appendChild(dateTd);
+                tr.appendChild(cursTd);
+                tr.appendChild(newTd);
+                cursTable.appendChild(tr);
+            }
+
+            let sum = 0;
+            for (let i = 0; i<curs.length; i++) {
+                sum = sum + curs[i];
+            }
+            let average = sum / curs.length;
+            document.getElementById('middlenum').innerHTML = 'Среднее значение: ' + average;
+
+            let maxCurs = Math.max(...curs);
+            let minCurs = Math.min(...curs);
+            document.getElementById('max').innerHTML = 'Максимльное значение: ' + maxCurs;
+            document.getElementById('min').innerHTML = 'Минимальное значение: ' + minCurs;
+
+            }
     </script>
 </head>
 <body>
@@ -119,6 +154,12 @@
 
         <button id="currentTable" onclick="tableUmno()">Таблица умножения</button>
         <table id="tableOfUmno"></table>
+
+        <button id="curs" onclick="showCurs()">Курс акций ММК</button>
+        <table border="1" id="TableCurs"></table>
+        <div id="middlenum"></div>
+        <div id="max"></div>
+        <div id="min"></div>
 
     </main>
 
